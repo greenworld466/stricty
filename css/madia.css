@@ -1,0 +1,81 @@
+
+/*Large devices*/
+@media (max-width: 1199.98px) { ... }
+
+/*Medium devices*/
+@media (max-width: 991.98px) { 
+.navbar-nav {
+	text-align: center;
+	padding: 10px 0;
+}
+     .navbar-expand-lg .navbar-nav .nav-link {
+	padding-bottom: 5px;
+}
+     #service .service-item i {
+	margin-top: 20px;
+}
+    #pro .pro-text h3 {
+	font-size: 24px;
+}
+    #pro .pro-item {
+	margin-top: 20px;
+}
+}
+
+/*Small devices*/
+@media (max-width: 767.98px) { 
+.navbar-nav {
+	text-align: center;
+	padding: 10px 0;
+}
+     .navbar-expand-lg .navbar-nav .nav-link {
+	padding-bottom: 5px;
+}
+    #banner .banner-text h3 {
+	font-size: 80px;
+}
+    #banner .banner-text p {
+	font-size: 18px;
+}
+    #design .design-text p {
+	font-size: 16px;
+}
+    #service .service-item i {
+	margin-top: 20px;
+}
+    #pro .pro-text h3 {
+	font-size: 18px;
+}
+    #pro .pro-item {
+	margin-top: 20px;
+}
+    #form form button {
+	margin-left: 69%;
+}
+}
+
+/*Extra small devices*/
+@media (max-width: 575.98px) { 
+ .navbar-nav {
+	text-align: center;
+	padding: 10px 0;
+}
+     .navbar-expand-lg .navbar-nav .nav-link {
+	padding-bottom: 5px;
+}
+    #banner .banner-text h3 {
+	font-size: 80px;
+}
+    #service .service-item i {
+	margin-top: 20px;
+}
+    #pro .pro-item {
+	margin-top: 10px;
+}
+    #form form button {
+	margin-left: 0;
+}
+    #form .form-check {
+	margin-top: 20px;
+}
+}

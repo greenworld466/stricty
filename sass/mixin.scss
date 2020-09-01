@@ -1,0 +1,10 @@
+@mixin round{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to right, #48baff , #5fc3ff)
+}
+@mixin round2($height,$width,$color) {
+    height: $height;
+    width: $width;
+    background: $color;
+}

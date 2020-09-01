@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+//Variables
+
+
+//mixin
+@import "./mixin";
+@import "./verible";
+
+.perloader{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    #load{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+}
+
+.back-top{
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+    z-index: 999;
+    i{
+    width: 50px;
+    height: 50px;
+    background: #473553;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+}
+
+.bg{
+    animation: menu 2s;
+}
+@keyframes menu{
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+.navbar {
+    background: $percoler;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    transition: all linear .3s;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #252525;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $fontfamily;
+    text-transform: uppercase;
+    position: relative;
+    transition: all linear .3s;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0 0 0 30px;
+}
+
+#banner {
+    padding-top: 218px;
+    padding-bottom: $marginsec;
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .banner-text {
+        h3 {
+            color: $percoler;
+            font-size: 120px;
+            font-weight: 700;
+            font-family: $fontfamily;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: 600px;
+                background: $overcolr;
+                bottom: -10px;
+                ;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        p {
+            color: $percoler;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-top: 35px;
+            padding-bottom: 60px;
+        }
+
+        .banner-btn a {
+            padding: 20px 33px;
+            background: none;
+            border: 1px solid $overcolr;
+            color: $percoler;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            display: inline-block;
+        }
+
+        i {
+            font-size: 15px;
+            color: $percoler;
+            padding-top: 177px;
+        }
+    }
+}
+
+#design {
+    padding-top: $marginsec;
+    padding-bottom: $marginsec;
+    background: #f6f9f9;
+
+    .design-text {
+        h3 {
+            color: #2d3950;
+            font-size: 40px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 20px;
+        }
+
+        p {
+            color: $percoler2;
+            font-size: 18px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            line-height: 32px;
+        }
+    }
+}
+
+#service {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    .service-item {
+        i {
+            @include round();
+            color: $percoler;
+            font-size: 50px;
+            line-height: 100px;
+        }
+
+        h3 {
+            color: #2d3950;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 15px;
+            padding-top: 30px;
+        }
+
+        p {
+            color: $percoler2;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            line-height: 22px;
+        }
+    }
+}
+
+
+#pro {
+    padding-top: $marginsec;
+    padding-bottom: 115px;
+    background: #f6f9f9;
+
+    .pro-text {
+        h3 {
+            color: #2d3950;
+            font-size: 41px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: $percoler2;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 75px;
+        }
+    }
+
+    .pro-item {
+        position: relative;
+        transition: all linear .3s;
+
+        &:hover .pro-overly {
+            opacity: 1;
+        }
+
+        .pro-overly {
+            background: rgba(21, 164, 250, 0.8);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0;
+            transition: all linear .3s;
+
+            .overly-icon {
+                margin-right: 10px;
+                float: left;
+                position: relative;
+                top: 50%;
+                left: 60%;
+                transform: translate(-50%, -60%);
+                height: 40px;
+                width: 40px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+
+                i {
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: 40px;
+                }
+            }
+
+        }
+    }
+}
+
+#form {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    background: url(../images/form.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .form-text {
+        h3 {
+            color: #fff;
+            font-size: 41px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 15px;
+        }
+
+        p {
+            color: $percoler2;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            padding-bottom: 35px;
+        }
+    }
+
+    .client-frm {
+        width: 100%;
+        color: $percoler2;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: $fontfamily;
+        margin-bottom: 20px;
+        background: none;
+        padding-left: 15px;
+    }
+
+    form button {
+        border: 1px solid #15a4fa;
+        background: none;
+        padding: 15px 45px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $fontfamily;
+        margin-left: 79%;
+
+    }
+
+    .form-check {
+        margin-top: -20px;
+        color: $percoler2;
+    }
+
+}
+#fooder{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #f6f9f9;
+    .fooder-text{
+        p{
+            color: $percoler2;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: $fontfamily;
+            line-height: 40px;
+        }
+    }
+    .fooder-icon{
+        i{
+            font-size: 40px;
+            color: #15a4fa;
+        }
+    }
+}
